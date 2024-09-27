@@ -1,0 +1,103 @@
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+    /* Different gradient */
+    color: #2d3748;
+    /* Dark text for contrast */
+    text-align: center;
+    position: relative;
+    padding: 20px;
+
+    /* Add some padding for smaller screens */
+}
+
+.home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.home-content {
+    position: relative;
+    z-index: 2;
+    border-radius: 15px;
+    /* Rounded corners for content */
+    padding: 40px;
+    /* Padding for content */
+    background: white;
+    /* Background color for content */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    /* Initial shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition for hover effects */
+}
+
+.home-content:hover {
+    transform: scale(1.05);
+    /* Scale up on hover */
+    box-shadow: 0 8px 30px rgba(210, 128, 29, 0.3);
+    /* Enhance shadow on hover */
+}
+
+.home h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #2c5282;
+    /* Darker color for heading */
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+    /* Light text shadow */
+}
+
+.home p {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #4a5568;
+    /* Dark grey for paragraph text */
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+    /* Light text shadow */
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /* Space between buttons */
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff4081;
+    /* Pink color for project button */
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e91e63;
+    /* Darker pink on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    /* Add a shadow effect on hover */
+}
+
+.resume-button {
+    background-color: #25a22f;
+    /* Green color for resume button */
+}
+
+.resume-button:hover {
+    background-color: #45a049;
+    /* Darker green on hover */
+}

@@ -1,0 +1,53 @@
+.about {
+    background: linear-gradient(135deg, #f0f4f8 30%, #e2e8f0 100%);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 800px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.about::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-color: rgba(255, 255, 255, 0.1);
+    filter: blur(50px);
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.about:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #2d3748;
+    position: relative;
+    z-index: 1;
+}
+
+.about p {
+    font-size: 18px;
+    color: #4a5568;
+    line-height: 1.6;
+    text-align: justify;
+    position: relative;
+    z-index: 1;
+}
+
+.about p+p {
+    margin-top: 15px;
+    /* Add space between paragraphs */
+}

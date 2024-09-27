@@ -1,0 +1,89 @@
+.navbar {
+    background-color: #1e90ff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar:hover {
+    background-color: #1c7ed6;
+    /* Slightly darker on hover */
+}
+
+.nav-logo {
+    font-family:serif;
+    font-size: 30px;
+
+    /* Increased font size for prominence */
+    color: #000000;
+    /* Bright color to stand out */
+    font-weight: bold;
+    text-transform: uppercase;
+    /* Uppercase for a strong presence */
+    letter-spacing: 1px;
+    /* Adds space between letters */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow for depth */
+    transition: color 0.3s ease;
+    /* Transition for color change */
+}
+
+.nav-logo:hover {
+    color: #ffffff;
+    /* Changes color on hover for interactivity */
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: #fff;
+    padding: 10px 15px;
+    /* Increased padding for better click area */
+    border-radius: 4px;
+    transition: background 0.3s, transform 0.3s;
+    /* Added transform for scaling */
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+    /* Slight scaling effect on hover */
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        /* Stack items vertically */
+        padding: 10px;
+        /* Adjusted padding for smaller screens */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        /* Stack links vertically on smaller screens */
+        gap: 10px;
+        /* Reduced gap between links */
+    }
+
+    .nav-links a {
+        padding: 12px;
+        /* Increased padding for better accessibility */
+        text-align: center;
+        /* Center text for better alignment */
+        width: 100%;
+        /* Full width on mobile */
+    }
+}
