@@ -28,12 +28,12 @@ Check out the live version of my portfolio: [**Portfolio Website**](https://ravi
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/RavitejaUppulapu/your-repo-name.git
+    git clone https://github.com/RavitejaUppulapu/ravitejauppulapu_website.git
     ```
 
 2. Navigate to the project directory:
     ```bash
-    cd your-repo-name
+    cd ravitejauppulapu_website
     ```
 
 3. Install the dependencies:
