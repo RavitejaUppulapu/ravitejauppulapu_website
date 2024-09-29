@@ -1,4 +1,4 @@
-/* Base styles */
+/* Base styles for the navbar */
 .navbar {
     background-image: linear-gradient(45deg, #27243a, #3b3b6d, #6a1b9a, #e53935);
     padding: 15px 30px;
@@ -19,23 +19,25 @@
 .nav-logo {
     font-family: serif;
     font-size: 30px;
+    /* Increased font size for prominence */
     color: #ffffff;
+    /* Bright color to stand out */
     font-weight: bold;
     text-transform: uppercase;
+    /* Uppercase for a strong presence */
     letter-spacing: 1px;
+    /* Adds space between letters */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow for depth */
     transition: color 0.3s ease;
-}
-
-.nav-logo:hover {
-    color: #ffffff;
-    /* Consider changing this to a different color for interactivity */
+    /* Transition for color change */
 }
 
 /* Navigation links styles */
 .nav-links {
     display: flex;
     gap: 20px;
+    /* Space between links */
 }
 
 .nav-links li {
@@ -44,51 +46,97 @@
 
 .nav-links a {
     color: #fff;
+    /* Link color */
     padding: 10px 20px;
+    /* Increased padding for better click area */
     border-radius: 8px;
+    /* Slightly rounded corners */
     text-decoration: none;
+    /* Remove underline */
     background-color: rgba(255, 255, 255, 0.1);
+    /* Subtle background */
     transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transitions */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Soft shadow */
 }
 
+/* Link hover effects */
 .nav-links a:hover {
     background-color: #ff7e5f;
+    /* Vibrant background color on hover */
     transform: scale(1.05);
+    /* Slight zoom-in effect */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    /* Deeper shadow on hover */
+}
+
+/* Toggle button styles */
+.nav-toggle {
+    display: none;
+    /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 4px;
+    /* Height of the bars */
+    width: 25px;
+    /* Width of the bars */
+    background-color: white;
+    /* Color of the bars */
+    margin: 3px 0;
+    /* Spacing between the bars */
+    transition: all 0.3s ease;
+    /* Transition for smoothness */
 }
 
 /* Mobile responsive styles */
-@media (max-width: 1024px) {
-    .navbar {
-        padding: 10px;
-    }
-
-    .nav-links {
-        gap: 15px;
-        /* Adjust gap for medium-sized devices */
-    }
-}
-
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
-        /* Stack items vertically */
         padding: 10px;
+        /* Adjusted padding for smaller screens */
+    }
+
+    .nav-toggle {
+        display: flex;
+        /* Show toggle button */
     }
 
     .nav-links {
+        display: none;
+        /* Hide links initially */
         flex-direction: column;
         /* Stack links vertically */
         gap: 10px;
         /* Reduced gap between links */
+        width: 100%;
+        /* Full width on mobile */
+        background-color: rgba(255, 255, 255, 0.1);
+        /* Subtle background */
+        padding: 10px 0;
+        /* Add padding for better appearance */
+        position: absolute;
+        /* Absolute position for overlay effect */
+        top: 60px;
+        /* Adjusted to position below the navbar */
+        left: 0;
+        /* Align to left */
+        z-index: 5;
+        /* Ensure it appears above other content */
+    }
+
+    .nav-links.active {
+        display: flex;
+        /* Show links when active */
     }
 
     .nav-links a {
         padding: 12px;
         /* Increased padding for better accessibility */
         text-align: center;
-        /* Center text */
+        /* Center text for better alignment */
         width: 100%;
         /* Full width on mobile */
     }
