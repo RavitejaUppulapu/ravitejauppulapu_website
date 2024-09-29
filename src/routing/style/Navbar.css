@@ -1,5 +1,6 @@
+/* Base styles */
 .navbar {
-    background-color: #1e90ff;
+    background-image: linear-gradient(45deg, #27243a, #3b3b6d, #6a1b9a, #e53935);
     padding: 15px 30px;
     display: flex;
     justify-content: space-between;
@@ -7,37 +8,31 @@
     position: sticky;
     top: 0;
     z-index: 10;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-image 0.3s ease-in-out;
 }
 
 .navbar:hover {
-    background-color: #1c7ed6;
-    /* Slightly darker on hover */
+    background-image: linear-gradient(45deg, #ff7e5f, #feb47b, #6dd5ed, #2193b0);
 }
 
+/* Logo styles */
 .nav-logo {
-    font-family:serif;
+    font-family: serif;
     font-size: 30px;
-
-    /* Increased font size for prominence */
-    color: #000000;
-    /* Bright color to stand out */
+    color: #ffffff;
     font-weight: bold;
     text-transform: uppercase;
-    /* Uppercase for a strong presence */
     letter-spacing: 1px;
-    /* Adds space between letters */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    /* Subtle shadow for depth */
     transition: color 0.3s ease;
-    /* Transition for color change */
 }
 
 .nav-logo:hover {
     color: #ffffff;
-    /* Changes color on hover for interactivity */
+    /* Consider changing this to a different color for interactivity */
 }
 
+/* Navigation links styles */
 .nav-links {
     display: flex;
     gap: 20px;
@@ -49,31 +44,42 @@
 
 .nav-links a {
     color: #fff;
-    padding: 10px 15px;
-    /* Increased padding for better click area */
-    border-radius: 4px;
-    transition: background 0.3s, transform 0.3s;
-    /* Added transform for scaling */
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .nav-links a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: #ff7e5f;
     transform: scale(1.05);
-    /* Slight scaling effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Mobile responsive styles */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        /* Adjust gap for medium-sized devices */
+    }
+}
+
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
         /* Stack items vertically */
         padding: 10px;
-        /* Adjusted padding for smaller screens */
     }
 
     .nav-links {
         flex-direction: column;
-        /* Stack links vertically on smaller screens */
+        /* Stack links vertically */
         gap: 10px;
         /* Reduced gap between links */
     }
@@ -82,8 +88,21 @@
         padding: 12px;
         /* Increased padding for better accessibility */
         text-align: center;
-        /* Center text for better alignment */
+        /* Center text */
         width: 100%;
         /* Full width on mobile */
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .nav-logo {
+        font-size: 24px;
+        /* Smaller logo for extra small screens */
+    }
+
+    .nav-links a {
+        font-size: 14px;
+        /* Adjust font size for readability */
     }
 }
